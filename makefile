@@ -1,5 +1,4 @@
-#Automated compiler for project vox core and game
-#PROJECT-VOX branch compiler
+#Automated compiler for embedded web server
 
 #############################
 #  COMPILER CONFIG SECTION  #
@@ -44,11 +43,11 @@ INCLUDE_DIRS = -Ilibs
 src = src/main.cpp
 
 all:
-	@echo $(shell date): Compiling Project-VOX [web-test] at $(shell hostname) as $(shell whoami)
+	@echo $(shell date): Compiling WEB-SERVER [web-test] at $(shell hostname) as $(shell whoami)
 	@$(CXX) $(CXXFLAGS) -o $(TARGET) $(src) $(INCLUDE_DIRS) $(LIB_DIRS) $(LIBS)
-	@echo Project-VOX [web-test] compiled! Executable name: $(TARGET)
+	@echo WEB-SERVER [web-test] compiled! Executable name: $(TARGET)
 
 run:
-	@echo $(shell date): Runing Project-VOX [web-test] at $(shell hostname) via make directive as $(shell whoami)
+	@echo $(shell date): Runing WEB-SERVER [web-test] at $(shell hostname) via make directive as $(shell whoami)
 	@./$(TARGET)
 	@echo Test completed!
